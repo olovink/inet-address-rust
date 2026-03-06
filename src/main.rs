@@ -19,6 +19,10 @@ impl InetAddress {
     pub fn equals(&self, other: &InetAddress) -> bool {
         self.get_string_address() == other.get_string_address() && self.port == other.port && self.version == other.version
     }
+
+    pub fn get_as_ipv4addr(&self) -> Ipv4Addr {
+        Ipv4Addr::new(self.address[0], self.address[1], self.address[2], self.address[3])
+    }
 }
 
 fn main() {
