@@ -1,3 +1,5 @@
+use std::net::Ipv4Addr;
+
 #[derive(Copy, Clone, PartialEq, Eq, Debug)]
 struct InetAddress {
     address: [u8; 4],
